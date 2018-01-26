@@ -2,7 +2,10 @@ version: "3.2"
 services:
   web:
     image: dejuata/ci
-    build: .
+    build:
+      cache_from:
+        - pchico83/ci
+      context: .
     depends_on:
       - redis
     ports:
