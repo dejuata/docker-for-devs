@@ -2,4 +2,7 @@
 
 set -e
 
+echo "Pulling dejuata/ci..."
+docker pull dejuata/ci > /dev/null
+echo "done!"
 docker-compose build
